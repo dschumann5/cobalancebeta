@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>CoBalance - Co-Parenting Expense Tracking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 { color: #2c5aa0; }
+        .nav { margin: 20px 0; }
+        .nav a { margin-right: 15px; color: #2c5aa0; }
+    </style>
+</head>
+<body>
+    <h1>CoBalance</h1>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+    </div>
+    
+    <h2>Co-Parenting Expense Tracking Made Simple</h2>
+    <p>CoBalance helps divorced and separated parents manage shared expenses with dignity and clarity.</p>
+    
+    <h3>Features</h3>
+    <ul>
+        <li>Track shared expenses for children</li>
+        <li>Split costs fairly between parents</li>
+        <li>Maintain financial transparency</li>
+        <li>Reduce conflicts over money</li>
+        <li>Temporary loan feature to preserve dignity when funds are tight</li>
+    </ul>
+    
+    <h3>Contact</h3>
+    <p>For questions or support, please contact us through the app.</p>
+    
+    <p><small>&copy; 2026 CoBalance LLC. All rights reserved.</small></p>
+</body>
+</html>
