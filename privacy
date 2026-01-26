@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Privacy Policy - CoBalance</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 { color: #2c5aa0; }
+        .nav { margin: 20px 0; }
+        .nav a { margin-right: 15px; color: #2c5aa0; }
+    </style>
+</head>
+<body>
+    <h1>CoBalance Privacy Policy</h1>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+    </div>
+    
+    <p><strong>Last Updated: January 26, 2026</strong></p>
+    
+    <h2>1. Information We Collect</h2>
+    <p>CoBalance collects information you provide when using our co-parenting expense tracking service, including:</p>
+    <ul>
+        <li>Account information (name, email address)</li>
+        <li>Expense records and financial transactions between co-parents</li>
+        <li>Payment information for loan features</li>
+        <li>Communication between co-parents within the app</li>
+    </ul>
+    
+    <h2>2. How We Use Your Information</h2>
+    <p>We use your information to:</p>
+    <ul>
+        <li>Provide expense tracking and management services</li>
+        <li>Process transactions and loans between co-parents</li>
+        <li>Send notifications about shared expenses and payments</li>
+        <li>Improve and maintain our service</li>
+        <li>Comply with legal obligations</li>
+    </ul>
+    
+    <h2>3. Information Sharing</h2>
+    <p>We share expense information only with your designated co-parent(s) within the app. We do not sell your personal information to third parties. We may share information with service providers who help us operate the app, and when required by law.</p>
+    
+    <h2>4. Data Security</h2>
+    <p>We implement appropriate security measures to protect your information, including encryption and secure data storage through Firebase services.</p>
+    
+    <h2>5. Your Rights</h2>
+    <p>You have the right to access, correct, or delete your personal information. You can manage your data through the app settings or by contacting us.</p>
+    
+    <h2>6. Children's Privacy</h2>
+    <p>CoBalance is designed for use by parents and guardians. We do not knowingly collect information from children under 13.</p>
+    
+    <h2>7. Changes to This Policy</h2>
+    <p>We may update this privacy policy periodically. We will notify users of significant changes through the app.</p>
+    
+    <h2>8. Contact Us</h2>
+    <p>If you have questions about this privacy policy, please contact us through the app or at the email address provided in your app settings.</p>
+    
+    <p><small>&copy; 2026 CoBalance LLC. All rights reserved.</small></p>
+</body>
+</html>
