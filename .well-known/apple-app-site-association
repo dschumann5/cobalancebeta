@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "K5U7C3M2H3.ai.cobalance.app",
+        "paths": ["/invite/p/*"]
+      }
+    ]
+  }
+}
