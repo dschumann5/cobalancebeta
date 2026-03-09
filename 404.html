@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>You've been invited to CoBalance</title>
+  
+  <meta property="og:title" content="Join my CoBalance Partnership" />
+  <meta property="og:description" content="CoBalance: The intelligent expense tracker for co-parents." />
+  <meta property="og:type" content="website" />
+  
+  <!-- Modern Clean Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-background: #0B2C3D;
+      --color-surface: #153C4F;
+      --color-primary: #33A18F;
+      --color-primary-dark: #2A8576;
+      --color-text: #FFFFFF;
+      --color-text-muted: rgba(255, 255, 255, 0.7);
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--color-background);
+      color: var(--color-text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 24px;
+    }
+
+    .container {
+      background-color: var(--color-surface);
+      border-radius: 24px;
+      padding: 48px 32px;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo {
+      font-size: 32px;
+      font-weight: 700;
+      text-transform: lowercase;
+      letter-spacing: -1px;
+      margin-bottom: 32px;
+      display: inline-flex;
+      align-items: center;
+    }
+    
+    .logo-icon {
+      margin-right: 8px;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+
+    p {
+      color: var(--color-text-muted);
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 32px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background-color: var(--color-primary);
+      color: white;
+      text-decoration: none;
+      padding: 18px;
+      border-radius: 100px;
+      font-size: 18px;
+      font-weight: 600;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+      cursor: pointer;
+      border: none;
+      margin-bottom: 16px;
+    }
+
+    .btn:hover {
+      background-color: var(--color-primary-dark);
+    }
+    
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .btn.outline {
+      background-color: transparent;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      color: white;
+    }
+
+    .btn.outline:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+    
+    .footer {
+      margin-top: 32px;
+      font-size: 14px;
+      color: var(--color-text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="logo">
+      <svg class="logo-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2L22 7V17L12 22L2 17V7L12 2Z" stroke="#33A18F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 22V12" stroke="#33A18F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M22 7L12 12L2 7" stroke="#33A18F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      cobalance
+    </div>
+
+    <h1>You've been invited!</h1>
+    
+    <p>Your co-parent has invited you to join their CoBalance partnership to track shared expenses seamlessly.</p>
+
+    <!-- Attempt to deep link via custom scheme -->
+    <a href="#" id="openAppBtn" class="btn">
+      I already have the app
+    </a>
+
+    <!-- Placeholder for App Store Link -->
+    <a href="https://apps.apple.com/us/app/cobalance-co-parenting/id6741757829" class="btn outline" target="_blank" rel="noopener noreferrer">
+      Download CoBalance
+    </a>
+  </div>
+  
+  <div class="footer">
+    iOS Universal Links not supported?<br>Make sure you open this link on an iPhone.
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Extract the partnership ID from the URL:
+      // Assuming URL format: https://cobalance.ai/invite/p/PARTNERSHIP_ID
+      const pathSegments = window.location.pathname.split('/').filter(Boolean);
+      let partnershipId = '';
+      
+      if (pathSegments.length >= 2 && pathSegments[0] === 'invite' && pathSegments[1] === 'p') {
+          partnershipId = pathSegments[2] || '';
+      }
+
+      const openAppBtn = document.getElementById('openAppBtn');
+      
+      if (openAppBtn) {
+        if (partnershipId) {
+          // Construct the custom URI scheme deep link
+          const customSchemeUrl = `cobalance://invite/p/${partnershipId}`;
+          openAppBtn.href = customSchemeUrl;
+          
+          // Optionally attempt auto-redirect on mobile
+          if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+              setTimeout(() => {
+                window.location.href = customSchemeUrl;
+              }, 500);
+          }
+        } else {
+           // Fallback default
+           openAppBtn.href = "cobalance://";
+        }
+      }
+    });
+  </script>
+</body>
+</html>
